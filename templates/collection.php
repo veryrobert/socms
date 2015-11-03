@@ -11,8 +11,6 @@
   		<?php snippet( snippet('collection/' . $collection->_fieldset(), array('collection' => $collection)) ) ?>
 	<?php endforeach ?>
 
-
-
 	</section>
 
 <?php snippet('footer') ?>

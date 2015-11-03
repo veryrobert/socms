@@ -7,8 +7,8 @@ password: >
 language: en
 role: admin
 history:
-  - shop/captain-nik
+  - shop/captain-nik/drift
   - shop/downstroke
-  - collection/2015
-  - collection
-  - about
+  - shop/captain-nik
+  - shop/two-tone/beetroot
+  - shop/slidestroke

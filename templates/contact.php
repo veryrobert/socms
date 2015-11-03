@@ -3,12 +3,28 @@
 <section class="about page content">
 
 	<div class="full title">
-	      <h2><?php echo $page->title()->html() ?></h2>
+	      <h2><?php echo $page->info() ?></h2>
+
+
 	</div>
 
-    <div class="full">
-	    <div class="sixthoffset twothirds">
-	      <?php echo $page->text()->kirbytext() ?>
+
+	
+
+
+	 <div class="full">  
+
+  
+  		  <div class="third text-center">
+	      <?php echo $page->addressOne()->kirbytext() ?>
+    	</div>
+
+	    <div class="third text-center">
+	      <?php echo $page->addressTwo()->kirbytext() ?>
+    	</div>
+    
+	    <div class="third text-center">
+	      <?php echo $page->addressThree()->kirbytext() ?>
     	</div>
     </div>
 

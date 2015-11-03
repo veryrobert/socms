@@ -2,9 +2,9 @@
 
 <section class="about page content">
 
-	<div class="full title">
+	<!-- <div class="full title">
 	      <h2><?php echo $page->title()->html() ?></h2>
-	</div>
+	</div> -->
 
     <div class="full">
 	    <div class="sixthoffset twothirds">

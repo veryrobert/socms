@@ -1,5 +1,7 @@
 
-    
+   
+
+
 
 
 
@@ -7,17 +9,17 @@
     <div class="full">
         <div class="sixth menu">
             <ul>
-                <li><a href="page.html">Stockists</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="collection.html">Collections</a></li>
+                <!-- <li><a href="page.html">Stockists</a></li> -->
+                <li><a href="/about">About</a></li>
+                <li><a href="/collection">Collections</a></li>
             </ul>
         </div>
 
         <div class="third menu">
             <ul>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="page.html">Journal</a></li>
-                <li><a href="page.html">Product Care</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/journal">Journal</a></li>
+                <!-- <li><a href="page.html">Product Care</a></li> -->
             </ul>
         </div>
 
@@ -26,10 +28,13 @@
                 <h4>Mailing List</h4>
             </div>
             <div class="full">
-                <form>
+                <form >
                     <input placeholder="Email Address" type="text">
                     <input type="submit" value="submit">
                 </form>
+
+         
+
                 <a class="top" href="#">Top</a>
             </div>
         </div>
@@ -41,11 +46,11 @@
         </div>
 
         <div class="sixth credit">
-            <p><?php echo $site->copyright()->kirbytext() ?></p>
+            <!-- <p><?php echo $site->copyright()->kirbytext() ?></p> -->
         </div>
 
         <div class="sixth credit">
-            <a href="http://www.workbypost.com">Site by Post</a>
+            <!-- <a href="http://www.workbypost.com">Site by Post</a> -->
         </div>
     </div>
 </footer>
@@ -64,9 +69,10 @@
     </script>
 
 	<?php echo js(array(
-	  'assets/js/vendor.js',
-	  'assets/js/main.js',
+      'assets/js/vendor.js',
+      'assets/js/main.js'
 	)) ?>
+
 
 
 

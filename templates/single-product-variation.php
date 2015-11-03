@@ -54,22 +54,43 @@ $newSizes = str_replace(',', '|', $sizes);
 
 
         <div class="third info">
+         <h1><?php echo $page->parent()->title() ?><span class="price">€<?php echo $page->parent()->price() ?></span></h1>
+         <?php echo $page->parent()->material()->kirbytext() ?>
+         <?php echo $page->parent()->shortdescription()->kirbytext() ?>
 
+          <div class="full">
+<!--                  <div class="sizes half">
+                    <span class="custom-dropdown">
+              <select>  
+                 <option value="NULL" disabled="" selected="">Colour</option>
+                  <option>Large</option>
+                  <option>Medium</option>  
+                  <option>Small</option>
+              </select>
+          </span>
+                  </div>
 
-         <h1><?php echo $page->title() ?><span class="price">€<?php echo $page->price() ?></span></h1>
-         <?php echo $page->material()->kirbytext() ?>
-        <?php echo $page->parent()->shortdescription()->kirbytext() ?>
+                  <div class="colours half">
 
+          <span class="custom-dropdown">
+              <select>  
+                 <option value="NULL" disabled="" selected="">Select Size</option>
+                  <option>Large</option>
+                  <option>Medium</option>  
+                  <option>Small</option>
+              </select>
+          </span>
 
-
+                </div>
+ -->
                 <div class="cart full no-margin-top">
                   <a href="#"
     class="snipcart-add-item"
     data-item-id="1"
-    data-item-name="<?php echo $page->title() ?>"
-    data-item-price="<?php echo $page->price() ?>"
+    data-item-name="<?php echo $page->parent()->title() ?>"
+    data-item-price="<?php echo $page->parent()->price() ?>"
     data-item-url="http://c3dc8589.ngrok.io/"
-    data-item-description="<?php echo $page->longdescription() ?>"
+    data-item-description="<?php echo $page->parent()->shortdescription() ?>"
     data-item-custom1-name="Colour"
     data-item-custom1-options="<?php echo $newColours; ?>"
     data-item-custom2-name="Size"
@@ -84,7 +105,7 @@ $newSizes = str_replace(',', '|', $sizes);
                 <li>
                   <a href="#"><strong>Details &amp; Fit</strong></a>
                   <div class="hide">
-                  <?php echo $page->details()->kirbytext() ?>
+                  <?php echo $page->parent()->details()->kirbytext() ?>
                   </div>
                 </li>
                 </ul>
@@ -92,7 +113,7 @@ $newSizes = str_replace(',', '|', $sizes);
                 <li>
                   <a href="#"><strong>Measurements</strong></a>
                   <div class="hide">
-                     <?php echo $page->measurments()->kirbytext() ?>
+                     <?php echo $page->parent()->measurments()->kirbytext() ?>
                   </div>
                 </li>
               </ul>
@@ -104,6 +125,27 @@ $newSizes = str_replace(',', '|', $sizes);
     </div>
 
 
+
+<div class="full">
+
+<?php 
+  
+  $items = false;
+
+  $currentPage = $page->parent()->children()->findOpen();
+  $subPages = $page->parent()->children();
+
+  foreach ($subPages as $subPage) {
+    if ($subPage !== $currentPage) {
+      echo $subPage->title();
+    }
+  }
+
+ ?>
+
+
+
+</div>
 
 </section>
 

@@ -1,11 +1,14 @@
 <?php snippet('header') ?>
 
+
+
+
 <div class="home page">
     <section class="collection">
         <div class="full title">
             <h2><?php echo $page->collectiontext() ?>
             </h2>
-            <a class="view" href="<?php echo $page->collectiontext() ?>"><?php echo $page->collectiontitle() ?></a>
+           <a class="all" href="/collection">View Collection</a>
         </div>
 
 
@@ -50,7 +53,7 @@
                 echo html('<div class="half product">
                   <a href="'.$link.'">
                     <img src="'.$imageUrl.'" alt="'.$title.'">
-                    <h4>'.title.'</h4>
+                    <h4>'.$title.'</h4>
                     <span class="view">View Piece</span>
                   </a>
                 </div>');
